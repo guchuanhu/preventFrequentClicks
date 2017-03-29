@@ -24,10 +24,10 @@
                 $("#content").prepend("秒数："+d.getSeconds()+"<br>");
 
 
-                $(this).attr('clickable','false');
+                $(this).attr('clickable','false').val("冷却中...");
                 (function(that){
                     setTimeout(function(){
-                        $(that).attr('clickable','true');
+                        $(that).attr('clickable','true').val("点我");
                     },1000);
                 })(this);
 
@@ -36,7 +36,7 @@
     </script>
 </head>
 <body>
-<input id="ipt" type="button" value="dianwo" />
+<input id="ipt" type="button" value="点我" />
 <div id="content"></div>
 </body>
 </html>
