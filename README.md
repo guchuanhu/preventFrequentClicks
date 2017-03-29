@@ -1,2 +1,6 @@
 # preventFrequentClicks
-Prevent frequent clicks
+防暴击，有效抵挡用户高频率点击按钮<br>
+##功能介绍
+1、防止用户频繁提交表单等动作。<br>
+##使用讲解
+1、可以在定时器中指定冷却时间；
