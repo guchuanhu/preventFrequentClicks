@@ -1,0 +1,2 @@
+# preventFrequentClicks
+Prevent frequent clicks
