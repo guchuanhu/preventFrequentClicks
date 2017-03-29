@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>Title</title>
+    <style>
+
+    </style>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+
+            $('#ipt').on('click',fn);
+
+            function fn(){
+                if( $(this).attr('clickable') === 'false'){
+                    return ;
+                }
+
+                //do something
+                var d = new Date();
+
+                $("#content").prepend("秒数："+d.getSeconds()+"<br>");
+
+
+                $(this).attr('clickable','false');
+                (function(that){
+                    setTimeout(function(){
+                        $(that).attr('clickable','true');
+                    },1000);
+                })(this);
+
+            }
+        });
+    </script>
+</head>
+<body>
+<input id="ipt" type="button" value="dianwo" />
+<div id="content"></div>
+</body>
+</html>
